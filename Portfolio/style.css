@@ -1,0 +1,35 @@
+header{
+background:black url(image/bgheader.jpg) no-repeat fixed center center/cover;
+height: 1000px;
+}
+nav ul li {
+    font-size: x-large;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+  
+  
+}
+a{
+    color: rgb(158, 167, 94);
+}
+body{
+    background-color: rgb(0, 0, 0);
+    font-family: serif
+}
+
+footer{
+
+}
+.menu{
+    text-align: center;
+    padding-top: 40px;
+}
+.myName{
+    color:rgb(133, 136, 107);
+    text-align: center;
+    padding-top: 700px;
+}
+p, h2{
+    color: #AE928D;
+}
