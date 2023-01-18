@@ -1,0 +1,18 @@
+body {
+    background-color: hsl(6, 54%, 89%); /* Better to use background color to be shure that there will be somthing if pictrure broken*/
+    background-image: url('bg.jpg')
+}
+img{
+    width: 200px; /* Do not yse both width and height. One or enother */
+    height: 100%; /* Just in case. Somtimese usefull */
+}
+h2, h3, h4, h5 {
+    display:inline
+}
+
+nav ul li {  
+list-style-type: none ;
+display: inline-block;
+width: 250px;
+
+}
