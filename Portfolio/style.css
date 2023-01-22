@@ -22,8 +22,46 @@ body{
 .myName{
     color:rgb(133, 136, 107);
     text-align: center;
-    padding-top: 700px;
+    padding-top: 400px;
+    font-size: 56px;
 }
+.portfolio{
+    color:rgb(133, 136, 107);
+    text-align: center;
+    padding-top: 150px;
+    font-size: 45px;
+}
+section img {
+    height: 300px;
+}
+
 p, h2{
     color: #AE928D;
+}
+p{
+    font-size: 14pt;
+    width: 80%;
+    text-align: justify;
+}
+h2{
+    font-size: 20pt;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.right{
+    text-align: right;
+    ma
+}
+
+p, img{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.differentBackground {
+    background-color: #202126;
+}
+footer p{
+    text-align: center;
 }
