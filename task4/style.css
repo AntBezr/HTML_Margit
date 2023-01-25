@@ -46,3 +46,6 @@ h2{
 p{
     line-height: 1.5; /* like in word*/
 }
+input, textarea, select {
+    font-family: inherit;
+}
