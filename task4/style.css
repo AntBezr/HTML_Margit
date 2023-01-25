@@ -5,6 +5,7 @@
 }
 body{
     background-color: bisque;
+    font-family: 'Open Sans', sans-serif;
 }
 header{
     background-color:rgba(214, 154, 132, 0.535);
@@ -36,4 +37,12 @@ h2, .box{
     margin: 20px;
     margin-left: 0px;
     float: left;
+}
+h2{
+    font-size: 50px;
+    padding: 150px 0;
+    text-align: center;
+}
+p{
+    line-height: 1.5; /* like in word*/
 }
