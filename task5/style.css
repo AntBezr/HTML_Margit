@@ -21,29 +21,45 @@ body{
     border-radius: 5px; 
 }
 input{
-    width: 220px;
-    height: 25px;
-    margin: 10px;
+    width: 250px;
+    height: 35px;
+    margin: 5px 25px 15px 25px;
     border: 1px solid rgb(158, 158, 158);
     border-radius: 5px;
 }
 p{
     text-align:center ;
-    font-size: 10px;
-    width: 210px;
+    font-size: 12px;
+    width: 250px;
     margin: auto;
+    color: rgb(109, 109, 109);
 }
 
 h1, h2, h3 {
     text-align: center;
-    width: 250px;
+    width: 300px;
     margin: auto;
-    padding: 10px;
 }
 h1{
     font-size: 35px;
     padding: 15px;
     font-weight: bolder;
+    margin: 10px;
+}
+h2{
+    font-size: 12pt;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+h3{
+    font-size: 12pt;
+    color: rgb(210, 210, 210);
+}
+
+label{
+    margin: 15px 25px 5px 25px;
+    font-size: 9pt;
+    color: rgb(101, 101, 101);
 }
 
 .undertext{
@@ -51,12 +67,17 @@ h1{
     text-align: center;
     margin: auto;
 }
+a{
+    text-decoration: none;
+    color:rgb(255,128,79) ;
+}
 button{
     background-color: rgb(255,128,79);
-    padding: 5px 50px;
+    padding: 10px 80px;
     display: block;
     margin: auto;
     color: rgb(255, 255, 255);
     border-radius: 5px;
     border: 0px;
+    margin-bottom: 15px;
 }
