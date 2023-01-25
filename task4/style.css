@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+}
+header{
+    background-color:rgba(214, 154, 132, 0.535);
+    padding: 20px;
+}
+nav ul li {
+    display: inline-block;
+
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    
+}
+main, header,h2{
+    padding: 20px;
+}
+h2, .box{
+    padding-left: 0px;
+}
+.box{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    margin-left: 0px;
+    float: left;
+}
