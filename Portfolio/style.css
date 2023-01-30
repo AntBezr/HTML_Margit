@@ -72,8 +72,28 @@ h2{
 .differentBackground {
     background-color: #202126;
 }
-footer p{
+/* footer p{
     display: inline-block;
-    width: 100%;
     text-align: center;
+    align-content: center;
+   
+} */
+label{
+    text-align: center;
+    color: #c5c5c5;
+    padding: 30px;
+}
+.copyrights{
+    font-size: 8pt;
+    text-align: center;
+}
+.contact{
+    text-align: center;
+}
+
+.contactmebox{
+    display: inline-block;
+    margin: auto;
+    width: 300px;
+    text-align: center
 }
