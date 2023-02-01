@@ -21,7 +21,7 @@ body{
     background-color: rgb(0, 0, 0);
     font-family: monospace;
     margin: 0;
-    
+
 }
 .menu{
     text-align: center;
@@ -72,12 +72,6 @@ h2{
 .differentBackground {
     background-color: #202126;
 }
-/* footer p{
-    display: inline-block;
-    text-align: center;
-    align-content: center;
-   
-} */
 label{
     text-align: center;
     color: #c5c5c5;
@@ -89,11 +83,27 @@ label{
 }
 .contact{
     text-align: center;
+    padding: 10px;
 }
 
 .contactmebox{
-    display: inline-block;
     margin: auto;
-    width: 300px;
-    text-align: center
+    width: 550px;   
+    text-align: center;
+    
 }
+footer{
+    margin: auto;
+    align-items: center;
+}
+#Message{
+   align-items: center;
+}
+label{
+    display: inline-block;
+    font-size: 8pt;
+    width: 200px;
+}
+input{
+    width: 200px;
+}   

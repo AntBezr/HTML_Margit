@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: antiquewhite;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+header{
+    background-color: rgb(64, 57, 47);
+    color: brown;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: rgb(154, 110, 110);
+}
+#hero-banner{
+    height: 75vh;
+    background: url('Nusha.jpeg') no-repeat center center/cover;
+    color: rgb(119, 104, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+h2{
+    font-size: 5rem;
+}
+.box{
+    background-color: rgba(254, 113, 95, 0.749);
+    height: 60px;
+    width: 60px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#left{
+    background-color: blue;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+
+}
+#right{
+    background-color: blueviolet;
+    width: 75vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteiner{
+    display: flex;
+}
+
+@media (max-width:576px) {
+    header{
+        padding: 1rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    #left{
+        flex-direction: row;
+    }
+    #left,#right{
+        width: 100vw;
+    }
+    .conteiner{
+        flex-direction: column;
+    }
+}

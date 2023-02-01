@@ -1,0 +1,30 @@
+body{
+    background-color: skyblue;
+}
+
+@media (min-width: 576px){
+    body{
+        background-color: rgb(110, 173, 198);
+
+    }
+}
+@media (min-width: 768px){
+    body{
+        background-color: rgb(74, 118, 135);
+
+    }
+}
+@media (min-width: 992px){
+    body{
+        background-color: rgb(46, 72, 82);
+        color: bisque;
+
+    }
+}
+@media (min-width: 1200px){
+    body{
+        background-color: rgb(22, 34, 39);
+        color: bisque;
+
+    }
+}
