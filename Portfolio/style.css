@@ -4,18 +4,26 @@
     box-sizing: border-box;
 }
 header{
-background:black url(image/bgheader.jpg) no-repeat fixed center center/cover;
-height: 1000px;
+    background:black url(image/bgheader.jpg) no-repeat fixed center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
 }
 nav ul li {
     font-size: x-large;
     display: inline-block;
-    text-align: center;
-    padding: 40px;
+    margin: 5px;
 }
+
 a{
     color: rgb(114, 117, 88);
-    font-size: 16pt;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+h1{
+    font-size: 2.5rem;
+    color:rgb(114, 117, 88) ;
 }
 body{
     background-color: rgb(0, 0, 0);
@@ -23,16 +31,11 @@ body{
     margin: 0;
 
 }
-.menu{
-    text-align: center;
-    padding-top: 40px;
-}
-.myName{
-    color:rgb(114, 117, 88);    
-    text-align: center;
-    padding-top: 150px;
-    font-size: 56px;
-}
+/* #heroBanner{
+    width: 100%;
+    align-self: center;
+    
+} */
 .portfolio{
     color:rgb(133, 136, 107);
     text-align: center;
@@ -42,9 +45,36 @@ body{
 section img {
     height: 500px;
 }
+#projectId{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.projectBox{
+    width: 25vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(250, 235, 215, 0.311);
+    justify-content: space-around;
+    border-radius:10px;
+}
+
+.projectImg{
+    height: 300px;
+}
+.hea{
+    width: 100vw;
+}
 .box{
-    display: inline-block;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    align-items: center;
+    align-content: center;
 }
 
 p{
@@ -58,7 +88,7 @@ p, img{
     display: inline-block;
     line-height: 1.52;
     margin: auto;
-    padding: 45px;
+    padding: 10px;
 }
 
 h2{
