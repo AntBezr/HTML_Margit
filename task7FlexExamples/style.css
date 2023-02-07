@@ -19,6 +19,7 @@ header{
     align-items: center;
 }
 
+
 nav ul li {
     display: inline-block;
 }
@@ -35,8 +36,9 @@ nav ul li a {
     align-items: center;
     text-align:center;
 }
-h2{
-    font-size: 5rem;
+h2 {
+    font-size: 7rem;
+    padding: 0;
 }
 
 .box{

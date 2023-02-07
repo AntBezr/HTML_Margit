@@ -6,10 +6,33 @@
 header{
     background:black url(image/bgheader.jpg) no-repeat fixed center center/cover;
     height: 100vh;
+    color:rgb(114, 117, 88) ;
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    flex-wrap: wrap;
 }
+.logo{
+    height: 8rem;
+    align-self: center;
+}
+
+h1{
+    width: 100vw;
+    text-align: center;
+    font-size: 3rem;
+    color:rgb(159, 165, 105) ;
+}
+
+ header div {
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    padding: 10px;
+} 
+h5{
+    font-size: 1.5rem;
+}
+
 nav ul li {
     font-size: x-large;
     display: inline-block;
@@ -21,39 +44,19 @@ a{
     font-size: 1.2rem;
     padding: 5px;
 }
-h1{
-    font-size: 2.5rem;
-    color:rgb(114, 117, 88) ;
-}
+
+
 body{
     background-color: rgb(0, 0, 0);
     font-family: monospace;
     margin: 0;
-
-}
-/* #heroBanner{
-    width: 100%;
-    align-self: center;
-    
-} */
-.portfolio{
-    color:rgb(133, 136, 107);
-    text-align: center;
-    padding-top: 150px;
-    font-size: 45px;
-}
-section img {
-    height: 500px;
-}
-#projectId{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
 }
-.projectBox{
-    width: 25vw;
-    height: 500px;
+
+.projectBGBox{  /* Project background box */
+    width: 300px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,78 +65,135 @@ section img {
     justify-content: space-around;
     border-radius:10px;
 }
-
-.projectImg{
-    height: 300px;
-}
-.hea{
-    width: 100vw;
-}
-.box{
+#projectId{
     display: flex;
-    justify-content: center;
-    height: 5rem;
-    align-items: center;
-    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-
+.projectImg{
+    width:  200px;
+    margin: 1rem;
+}
+h2{
+    font-size: 20pt;
+    color: #c5c5c5;
+    padding: 0;
+    vertical-align: center; 
+    width: 100vw;
+} 
+section img {
+    height: 400px;
+}
 p{
     font-size: 14pt;
     width: 75%;
     text-align: justify;
     vertical-align:top; 
     color: #c5c5c5;
+    line-height: 1.5;
+}   
+section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5vh 5vw;
 }
-p, img{
-    display: inline-block;
-    line-height: 1.52;
-    margin: auto;
-    padding: 10px;
-}
-
-h2{
-    font-size: 20pt;
-    color: #c5c5c5;
-    padding: 45px;
-    padding-bottom: 0px;
-    vertical-align: center; 
-} 
 
 .differentBackground {
     background-color: #202126;
+   
+
 }
+footer{
+    text-align: center;
+} 
+
+footer div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
 label{
     text-align: center;
     color: #c5c5c5;
-    padding: 30px;
+    padding: 15px;
+    font-size: 8pt;
+    width: 200px;
 }
+
 .copyrights{
     font-size: 8pt;
     text-align: center;
-}
-.contact{
-    text-align: center;
-    padding: 10px;
+    width: 100vw;
 }
 
-.contactmebox{
-    margin: auto;
-    width: 550px;   
-    text-align: center;
-    
-}
-footer{
-    margin: auto;
-    align-items: center;
-}
-#Message{
-   align-items: center;
-}
-label{
-    display: inline-block;
-    font-size: 8pt;
-    width: 200px;
-}
 input{
     width: 200px;
 }   
+textarea{
+    width: 200px;
+}
+
+button{
+    color: black;
+    background-color: rgb(114, 117, 88);
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    margin: 1rem 0;
+}
+
+@media (max-width:576px){
+  header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+  input{
+    width: 100px;
+}   
+textarea{   
+    width: 100px;
+    height: 50px;
+}
+}
+
+
+
+
+
+
+@media (max-width:992px){
+header{
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+a{
+    font-size: 1.5rem;
+}
+h1{
+  color:rgb(114, 117, 88);
+}
+    section{
+        padding: 2vh 5vw;
+    }
+    section p {
+        width: 90%;
+        line-height: 1.52;
+    }
+    section img {
+        width: 68vw;
+        height: auto;
+        margin: 20px 0;
+    }
+    .projectBGBox{ 
+margin: 10px 0;
+    }
+    label{
+        font-size: 1rem;
+    }
+}
