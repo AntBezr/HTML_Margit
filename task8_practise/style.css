@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: rgb(150, 163, 141) ;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+header{
+    background-color: rgb(121, 139, 133);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* ul{
+display: flex;
+} */
+
+li{
+    display: inline-block;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1rem;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+p:first-child{
+    background-color: rgb(94, 165, 165);
+    font-weight: 700;
+}
+
+p:last-child{ /* FOR LAST child */
+    background-color: antiquewhite;
+}
+p:nth-child(4n){ /*   for specific number(write just a number ) or even or odd or for n-th paragrabg (examle 5n for ech 5th child*/
+    background-color: yellowgreen;
+}
+p:nth-child(4n+2){  /* for n-th childe starts with 2 */
+    background-color:blueviolet;
+}
+
+
+/* creates element that is not inside DOM (Js can't see it) but apears on the page */
+/* h2::before{ 
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    display: block;
+} */
+
+/* Mandatory to have CONTENT otherwise it won't apear on the page  */
+h2::after{
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    display: block;
+}
+
+/* USE POSITION ONLY WHEN ITS NEEDED */
+
+/*  have absolute position on the SCREN. Might be used for banners or smthg like this
+stay on the same place even if screen moving
+
+*/
+.box{
+    height: 100px;
+    width: 120px;
+    background-color: brown;
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+}
+
+
+/* Relative position creatse a gap on the place it created. 
+    stace absolute on the PAGE
+*/
+.box1{
+    height: 100px;
+    width: 150px;
+    background-color: brown;
+    position: relative;
+    bottom: 20px;
+    left:200px;
+}
+
+/* To use position absolute we have to be shure that parent RELATIVE (position) */
+main{
+    position: relative;
+}
+/* z-index for use (move to back or move to move forward) */
+.box2{
+    height: 100px;
+    width: 150px;
+    background-color: rgb(184, 157, 157);
+    position: absolute;
+    top: 200px;
+    left:150px;
+    z-index: 1;
+}
+
+/* Stay calm until scroll riched mentioned position
+then box sticks to the place 
+*/
+.box3{
+    height: 100px;
+    width: 150px;
+    background-color: rgb(58, 138, 36);
+    position: sticky;
+    top: 150px;
+    left:200px;
+}
