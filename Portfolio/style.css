@@ -143,6 +143,33 @@ button{
     border-radius: 0.8rem;
     margin: 1rem 0;
 }
+.skillsBox{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    background-color: rgba(250, 235, 215, 0.311);
+    margin-top: 20px;
+    color: hsl(15, 69%, 73%);
+
+}
+.skillsBox label {
+    color: black;
+    font-size: 16px;
+}
+i{
+    font-size: 50px;
+}
+
+progress{
+    width: 80%; 
+    height: 30px;
+}
+
+
 
 @media (max-width:576px){
   header div {
