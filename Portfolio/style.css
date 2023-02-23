@@ -1,35 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    background:black url(image/bgheader.jpg) no-repeat fixed center center/cover;
+
+header {
+    background: black url(image/bgheader.jpg) no-repeat fixed center center/cover;
     height: 100vh;
-    color:rgb(114, 117, 88) ;
+    color: rgb(114, 117, 88);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.logo{
+
+.logo {
     height: 8rem;
     align-self: center;
 }
 
-h1{
+h1 {
     width: 100vw;
     text-align: center;
     font-size: 3rem;
-    color:rgb(159, 165, 105) ;
+    color: rgb(159, 165, 105);
 }
 
- header div {
+header div {
     display: flex;
     align-items: center;
     height: 10rem;
     padding: 10px;
-} 
-h5{
+}
+
+h5 {
     font-size: 1.5rem;
 }
 
@@ -39,14 +42,14 @@ nav ul li {
     margin: 5px;
 }
 
-a{
+a {
     color: rgb(114, 117, 88);
     font-size: 1.2rem;
     padding: 5px;
 }
 
 
-body{
+body {
     background-color: rgb(0, 0, 0);
     font-family: monospace;
     margin: 0;
@@ -54,7 +57,8 @@ body{
     flex-direction: column;
 }
 
-.projectBGBox{  /* Project background box */
+.projectBGBox {
+    /* Project background box */
     width: 300px;
     height: 400px;
     display: flex;
@@ -63,36 +67,42 @@ body{
     flex-direction: column;
     background-color: rgba(250, 235, 215, 0.311);
     justify-content: space-around;
-    border-radius:10px;
+    border-radius: 10px;
 }
-#projectId{
+
+#projectId {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.projectImg{
-    width:  200px;
+
+.projectImg {
+    width: 200px;
     margin: 1rem;
 }
-h2{
+
+h2 {
     font-size: 20pt;
     color: #c5c5c5;
     padding: 0;
-    vertical-align: center; 
+    vertical-align: center;
     width: 100vw;
-} 
+}
+
 section img {
     height: 400px;
 }
-p{
+
+p {
     font-size: 14pt;
     width: 75%;
     text-align: justify;
-    vertical-align:top; 
+    vertical-align: top;
     color: #c5c5c5;
     line-height: 1.5;
-}   
-section{
+}
+
+section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -102,20 +112,21 @@ section{
 
 .differentBackground {
     background-color: #202126;
-   
+
 
 }
-footer{
+
+footer {
     text-align: center;
-} 
-
-footer div{
-display: flex;
-justify-content: center;
-align-items: center;
 }
 
-label{
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
     text-align: center;
     color: #c5c5c5;
     padding: 15px;
@@ -123,107 +134,131 @@ label{
     width: 200px;
 }
 
-.copyrights{
+.copyrights {
     font-size: 8pt;
     text-align: center;
     width: 100vw;
 }
 
-input{
-    width: 200px;
-}   
-textarea{
+input {
     width: 200px;
 }
 
-button{
+textarea {
+    width: 200px;
+}
+
+button {
     color: black;
     background-color: rgb(114, 117, 88);
     padding: 0.5rem;
     border-radius: 0.8rem;
     margin: 1rem 0;
 }
-.skillsBox{
+
+.skillsBox {
     width: 200px;
     height: 200px;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
     background-color: rgba(250, 235, 215, 0.311);
     margin-top: 20px;
     color: hsl(15, 69%, 73%);
 
 }
+
 .skillsBox label {
     color: black;
     font-size: 16px;
 }
-.skillsBox:nth-child(2n+1){
+
+.skillsBox:nth-child(2n+1) {
     background-color: rgba(250, 235, 215, 0.421);
 }
-i{
+
+i {
     font-size: 50px;
 }
 
-progress{
-    width: 80%; 
+progress {
+    width: 80%;
     height: 30px;
 }
 
-
-
-@media (max-width:576px){
-  header div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 20px 0;
-  }
-  input{
-    width: 100px;
-}   
-textarea{   
-    width: 100px;
-    height: 50px;
-}
+#backToTop {
+    background-color: rgba(250, 235, 215, 0.311);
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    border-radius: 2rem;
+    display: none;
 }
 
 
+@media (max-width:576px) {
+    header div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+    }
 
+    input {
+        width: 100px;
+    }
 
-
-
-@media (max-width:992px){
-header{
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
+    textarea {
+        width: 100px;
+        height: 50px;
+    }
 }
-a{
-    font-size: 1.5rem;
-}
-h1{
-  color:rgb(114, 117, 88);
-}
-    section{
+
+
+
+
+
+
+@media (max-width:992px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        color: rgb(114, 117, 88);
+    }
+
+    section {
         padding: 2vh 5vw;
     }
+
     section p {
         width: 90%;
         line-height: 1.52;
     }
+
     section img {
         width: 68vw;
         height: auto;
         margin: 20px 0;
     }
-    .projectBGBox{ 
-margin: 10px 0;
+
+    .projectBGBox {
+        margin: 10px 0;
     }
-    label{
+
+    label {
         font-size: 1rem;
     }
 }
