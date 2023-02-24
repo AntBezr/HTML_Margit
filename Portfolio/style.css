@@ -4,19 +4,40 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header  */
+
 header {
-    background: black url(image/bgheader.jpg) no-repeat fixed center center/cover;
     height: 100vh;
     color: rgb(114, 117, 88);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0;
 }
 
-.logo {
-    height: 8rem;
-    align-self: center;
+header.gallery {
+    height: 10vh;
+    color: black;
+    background-color: rgb(250, 235, 215);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
 }
+
+.heroBanner {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: -1;
+}
+
 
 h1 {
     width: 100vw;
@@ -25,11 +46,15 @@ h1 {
     color: rgb(159, 165, 105);
 }
 
-header div {
+.menu {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    height: 10rem;
+    height: 5rem;
+    width: 100vw;
     padding: 10px;
+
+
 }
 
 h5 {
@@ -39,7 +64,7 @@ h5 {
 nav ul li {
     font-size: x-large;
     display: inline-block;
-    margin: 5px;
+    margin: 8px;
 }
 
 a {
@@ -48,6 +73,11 @@ a {
     padding: 5px;
 }
 
+.mobile {
+    display: none;
+}
+
+/* Body  */
 
 body {
     background-color: rgb(0, 0, 0);
@@ -56,6 +86,35 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5vh 5vw;
+    scroll-margin-top: 4rem;
+    min-height: 75vh;
+}
+
+p {
+    font-size: 14pt;
+    width: 75%;
+    text-align: justify;
+    vertical-align: top;
+    color: #c5c5c5;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 20pt;
+    color: #c5c5c5;
+    padding: 0;
+    vertical-align: center;
+    width: 100vw;
+}
+
+/* Projects */
 
 .projectBGBox {
     /* Project background box */
@@ -81,81 +140,13 @@ body {
     margin: 1rem;
 }
 
-h2 {
-    font-size: 20pt;
-    color: #c5c5c5;
-    padding: 0;
-    vertical-align: center;
-    width: 100vw;
-}
+/* About me Section */
 
 section img {
     height: 400px;
 }
 
-p {
-    font-size: 14pt;
-    width: 75%;
-    text-align: justify;
-    vertical-align: top;
-    color: #c5c5c5;
-    line-height: 1.5;
-}
-
-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5vh 5vw;
-    scroll-margin-top: 5rem;
-}
-
-.differentBackground {
-    background-color: #202126;
-
-
-}
-
-footer {
-    text-align: center;
-}
-
-footer div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-label {
-    text-align: center;
-    color: #c5c5c5;
-    padding: 15px;
-    font-size: 8pt;
-    width: 200px;
-}
-
-.copyrights {
-    font-size: 8pt;
-    text-align: center;
-    width: 100vw;
-}
-
-input {
-    width: 200px;
-}
-
-textarea {
-    width: 200px;
-}
-
-button {
-    color: black;
-    background-color: rgb(114, 117, 88);
-    padding: 0.5rem;
-    border-radius: 0.8rem;
-    margin: 1rem 0;
-}
+/* Skills section  */
 
 .skillsBox {
     width: 200px;
@@ -189,6 +180,47 @@ progress {
     height: 30px;
 }
 
+/* Footer */
+
+footer {
+    text-align: center;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    text-align: center;
+    color: #c5c5c5;
+    padding: 15px;
+    font-size: 8pt;
+    width: 200px;
+}
+
+.copyrights {
+    font-size: 8pt;
+    text-align: center;
+    width: 100vw;
+}
+
+input,
+textarea {
+    width: 200px;
+}
+
+button {
+    color: black;
+    background-color: rgb(114, 117, 88);
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    margin: 1rem 0;
+}
+
+/* Back to top button */
+
 #backToTop {
     background-color: rgba(250, 235, 215, 0.311);
     color: rgb(0, 0, 0);
@@ -205,6 +237,77 @@ progress {
     cursor: default;
 }
 
+/* menu on scroll */
+.bg {
+    background: rgba(250, 235, 215, 0.9);
+    color: '#235e67';
+    padding: 0.5rem;
+    height: 5rem;
+    width: 100vw;
+}
+
+.bg h1 {
+    display: none;
+}
+
+/* ################################################ */
+/* Galery css */
+.grid {
+    display: grid;
+    grid-template-areas: "a a b b d d" "a a b b d d" "a a c c d d" "a a c c d d" "e h h h d d" "f h h h i i" "g h h h i i";
+    gap: 1rem 1rem;
+    background-color: black;
+    margin: 10rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid img {
+    width: 100%;
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+    align-self: stretch;
+}
+
+.c {
+    grid-area: c;
+    align-self: stretch;
+}
+
+.d {
+    grid-area: d;
+    align-self: stretch;
+}
+
+.e {
+    grid-area: e;
+}
+
+.f {
+    grid-area: f;
+}
+
+.g {
+    grid-area: g;
+}
+
+.h {
+    grid-area: h;
+}
+
+.i {
+    grid-area: i;
+}
+
+/* ################################################ */
+/* Mobile setings */
 
 @media (max-width:576px) {
     header div {
@@ -231,11 +334,9 @@ progress {
 
 
 @media (max-width:992px) {
-    header {
-        display: flex;
-        justify-content: center;
-        align-content: flex-start;
-    }
+
+
+
 
     a {
         font-size: 1.5rem;
@@ -266,5 +367,30 @@ progress {
 
     label {
         font-size: 1rem;
+    }
+
+    /* Menu button */
+
+    nav ul {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    ul.responsive {
+        display: block;
+        background-color: rgb(250, 235, 215);
+        color: black;
+        position: absolute;
+        left: 0;
+        top: 5rem;
+        width: 100%;
+    }
+
+    ul.responsive li {
+        display: block;
+        margin: 1rem;
     }
 }
