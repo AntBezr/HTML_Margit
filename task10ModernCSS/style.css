@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Raleway:wght@700;900&display=swap');
+
+
+:root {
+  --bg-color: salmon;
+  --text-color: white;
+  --font: 'Dancing Scripts', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ########################## GLOBAL SETTINGS ##########################*/
+body {
+  background-image: linear-gradient(to right bottom, gray, red);
+  background-size: 400%;
+  color: var(--text-color);
+  font-family: var(--font);
+  animation: animatedBG 5s infinite;
+}
+
+@keyframes animatedBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header,
+footer {
+  height: 100px;
+  background-color: rgb(35, 48, 48);
+}
+
+h1 {
+  text-shadow: 0 0 5px rgb(255, 0, 0);
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  background-color: var(--text-color);
+  box-shadow: 0 0 5px #333;
+  color: blanchedalmond;
+  border: none;
+  height: 25px;
+  /*  transition: color 3s; */
+  /*  transition: background 1s; */
+  /*  transition: height 1s; */
+  /* transition: all; */
+  /*  box-shadow: inset; */
+  background: radial-gradient(#341543 #e01919);
+}
+
+button:hover {
+  filter: brightness(0.4);
+  /*   color: blueviolet; */
+  /*  height: 50px; */
+
+}
+
+/* ########################## grid SETTINGS ##########################*/
+img:nth-child(1) {
+  filter: blur(5px);
+  transition: all 1s 2s;
+}
+
+img:nth-child(1):hover {
+  filter: blur(0px);
+}
+
+img:nth-child(2) {
+  filter: brightness(0.4);
+}
+
+img:nth-child(3) {
+  filter: contrast(200%);
+}
+
+img:nth-child(4) {
+  filter: drop-shadow(0px 0px 5px blue)
+}
+
+img:nth-child(5) {
+  filter: grayscale(80%)
+}
+
+img:nth-child(6) {
+  filter: hue-rotate(180deg)
+}
+
+img:nth-child(7) {
+  filter: invert(75%)
+}
+
+img:nth-child(8) {
+  filter: opacity(45%)
+}
+
+img:nth-child(9) {
+  filter: saturate(30%)
+}
+
+img:nth-child(10) {
+  filter: sepia(60%)
+}
+
+
+/* ########################## Main  ##########################*/
+main {
+  min-height: calc(100vh - 200px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 2rem;
+  justify-items: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+/* ########################## Box  Animation  and  ##########################*/
+.box {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: #341543;
+  margin: 2rem;
+  /*   transition: all 15s; */
+  animation-name: myAnimation2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+
+@keyframes MovingAnimation {
+  from {
+    transform: scale(50% 50%);
+    background-color: rgb(95, 179, 26);
+  }
+
+  to {
+    transform: translate(200px, 200px);
+    background-color: #341543;
+  }
+}
+
+.box:hover {
+  animation-play-state: paused;
+  /* transform: scale(0.9, 1.5); 
+    transform: skew(40deg, 20deg);
+  transform: translate(50px, 100%);
+   transform: rotate(780deg);
+   transform: perspective(100px) rotateY(45deg); */
+}
+
+@keyframes myAnimation2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  25% {
+    transform: translate(200px, 0px);
+    border-radius: 500%;
+  }
+
+  50% {
+    transform: translate(200px, 200px);
+  }
+
+  75% {
+    transform: translate(0px, 200px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* ########################## Loader  ##########################*/
+.loader {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  background: radial-gradient(ellipse at center, rgb(255, 255, 255) 69%, rgba(0, 0, 0, 0) 70%), linear-gradient(to right, rgba(0, 0, 0, 0) 47%, #FFF 48%, #FFF 52%, rgba(0, 0, 0, 0) 53%);
+  background-size: 20px 20px, 20px auto;
+  background-repeat: repeat-x;
+  background-position: center bottom, center -5px;
+  box-sizing: border-box;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 20px;
+  height: 60px;
+  background: radial-gradient(ellipse at center, rgb(245, 5, 5) 69%, rgba(0, 0, 0, 0) 70%), linear-gradient(to right, rgba(0, 0, 0, 0) 47%, #FFF 48%, #FFF 52%, rgba(0, 0, 0, 0) 53%);
+  background-size: 20px 20px, 20px auto;
+  background-repeat: no-repeat;
+  background-position: center bottom, center -5px;
+  transform: rotate(0deg);
+  transform-origin: 50% 0%;
+  animation: animPend 1s linear infinite alternate;
+}
+
+.loader::after {
+  animation: animPend2 1s linear infinite alternate;
+  left: 100%;
+}
+
+@keyframes animPend {
+  0% {
+    transform: rotate(22deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animPend2 {
+
+  0%,
+  55% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-22deg);
+  }
+}

@@ -117,7 +117,7 @@ h2 {
 /* Projects */
 
 .projectBGBox {
-    /* Project background box */
+
     width: 300px;
     height: 400px;
     display: flex;
@@ -140,13 +140,14 @@ h2 {
     margin: 1rem;
 }
 
-/* About me Section */
+/* ########################## About me section ##########################*/
+
 
 section img {
     height: 400px;
 }
 
-/* Skills section  */
+/* ########################## Skills section ##########################*/
 
 .skillsBox {
     width: 200px;
@@ -180,7 +181,7 @@ progress {
     height: 30px;
 }
 
-/* Footer */
+/* ########################## Footer SETTINGS ##########################*/
 
 footer {
     text-align: center;
