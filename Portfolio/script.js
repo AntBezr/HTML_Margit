@@ -1,8 +1,9 @@
 const backButton = document.querySelector('#backToTop')
 const header = document.querySelector('header')
+const menu = document.querySelector('.menu')
 const mobButton = document.querySelector('.mobile')
 const nav = document.querySelector('nav ul')
-const menuItems = document.querySelectorAll('nav ul li a')
+const menuItems = document.querySelectorAll('ul li a')
 
 
 window.onscroll = function () { scrollFunction() };
@@ -11,10 +12,16 @@ const scrollFunction = () => {
   if (
     document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     backButton.style.display = 'block';
-    header.classList.add('bg')
+    menu.style.background = '#faebd7e6';
+    menuItems.forEach(item => {
+      item.style.color = "black"
+    });
   } else {
     backButton.style.display = 'none';
-    header.classList.remove('bg')
+    menu.style.background = 'transparent';
+    menuItems.forEach(item => {
+      item.style.color = "var(--primary-color)"
+    });
   }
 }
 

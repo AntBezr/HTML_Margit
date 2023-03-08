@@ -7,7 +7,9 @@
 :root {
     --darckGrey: rgb(114, 117, 88);
     --lightGrey: rgba(250, 235, 215, 0.311);
+    --greyText: #c5c5c5;
     --primary-color: white;
+    --blackText: black;
 }
 
 html {
@@ -17,26 +19,24 @@ html {
 body {
     background-color: rgb(0, 0, 0);
     font-family: monospace;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 /* ################### Header ################### */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 header {
-    height: 100vh;
+    height: 5rem;
     color: var(--darckGrey);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     position: fixed;
     top: 0;
 }
 
 header.gallery {
-    height: 10vh;
-    color: black;
+    height: 5rem;
+    color: var(--blackText);
     background-color: rgb(250, 235, 215);
     display: flex;
     justify-content: space-between;
@@ -46,30 +46,45 @@ header.gallery {
     z-index: 1;
 }
 
-.heroBanner {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    z-index: -100;
-
+header.gallery a {
+    color: var(--blackText);
 }
 
+.heroBanner {
+    background: url(image/bgheader.jpg) no-repeat fixed center center/cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 95vh;
+    z-index: -100;
+}
 
 h1 {
-    width: 100vw;
     text-align: center;
     font-size: 3rem;
-    color: rgb(159, 165, 105);
+    color: var(--greyText);
 }
 
 .menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    justify-self: center;
     height: 5rem;
     width: 100vw;
     padding: 10px;
+    color: var(--primary-color);
+}
+
+.menuGallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: center;
+    height: 5rem;
+    width: 100vw;
+    padding: 10px;
+    color: var(--blackText);
 }
 
 h5 {
@@ -83,7 +98,7 @@ nav ul li {
 }
 
 a {
-    color: var(--darckGrey);
+    color: var(--primary-color);
     font-size: 1.2rem;
     padding: 5px;
 }
@@ -94,16 +109,20 @@ a {
 
 /* ################### Body ################### */
 
+main {
+    display: flex;
+    flex-direction: column;
 
+}
 
 section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    padding: 5vh 5vw;
+    padding: 3vh 3vw;
     scroll-margin-top: 4rem;
-    min-height: 75vh;
+    min-height: 40vh;
 }
 
 p {
@@ -111,16 +130,17 @@ p {
     width: 75%;
     text-align: justify;
     vertical-align: top;
-    color: #c5c5c5;
+    color: var(--greyText);
     line-height: 1.5;
 }
 
 h2 {
     font-size: 20pt;
-    color: #c5c5c5;
+    color: var(--greyText);
     padding: 0;
     vertical-align: center;
-    width: 100vw;
+    width: 100%;
+    margin: 0.5rem;
 }
 
 /* ################### Projects ################### */
@@ -154,11 +174,17 @@ h2 {
     margin: 1rem;
 }
 
-/* ########################## About me section ##########################*/
+.projectBGBox h3 {
+    color: var(--primary-color);
+}
 
+/* ########################## About me section ##########################*/
+#aboutMe p {
+    width: calc(100% - 400px - 3rem);
+}
 
 section img {
-    height: 400px;
+    width: 400px;
 }
 
 /* ########################## Skills section ##########################*/
@@ -177,7 +203,7 @@ section img {
 }
 
 .skillsBox label {
-    color: black;
+    color: var(--primary-color);
     font-size: 16px;
 }
 
@@ -198,6 +224,8 @@ progress {
 
 footer {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 footer div {
@@ -208,7 +236,7 @@ footer div {
 
 label {
     text-align: center;
-    color: #c5c5c5;
+    color: var(--greyText);
     padding: 15px;
     font-size: 8pt;
     width: 200px;
@@ -217,7 +245,8 @@ label {
 .copyrights {
     font-size: 8pt;
     text-align: center;
-    width: 100vw;
+    align-self: center;
+
 }
 
 input,
@@ -226,7 +255,7 @@ textarea {
 }
 
 button {
-    color: black;
+    color: var(--blackText);
     background-color: var(--darckGrey);
     padding: 0.5rem;
     border-radius: 0.8rem;
@@ -240,7 +269,7 @@ button {
     color: rgb(0, 0, 0);
     font-size: 3rem;
     position: fixed;
-    right: 2rem;
+    right: 5rem;
     bottom: 2rem;
     border-radius: 2rem;
     display: none;
@@ -253,11 +282,10 @@ button {
 
 /*  ################### menu on scroll ################### */
 .bg {
-    background: rgba(250, 235, 215, 0.9);
-    color: '#235e67';
+    background: #faebd7e6;
     padding: 0.5rem;
     height: 5rem;
-    width: 100vw;
+    max-width: 100%;
 }
 
 .bg h1 {
@@ -332,10 +360,13 @@ button {
 @media (max-width:576px) {
     header div {
         display: flex;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin: 20px 0;
+        margin: 0;
     }
 
     input {
@@ -346,11 +377,18 @@ button {
         width: 100px;
         height: 50px;
     }
+
+    #backToTop {
+        background-color: var(--lightGrey);
+        color: rgb(0, 0, 0);
+        font-size: 3rem;
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+        border-radius: 2rem;
+        display: none;
+    }
 }
-
-
-
-
 
 
 @media (max-width:992px) {
@@ -399,7 +437,7 @@ button {
     ul.responsive {
         display: block;
         background-color: rgb(250, 235, 215);
-        color: black;
+        color: var(--blackText);
         position: absolute;
         left: 0;
         top: 5rem;
@@ -410,18 +448,43 @@ button {
         display: block;
         margin: 1rem;
     }
+
+    /* ########################## About me section ##########################*/
+    #aboutMe p {
+        width: 80%;
+    }
+
 }
 
-/* ################## Animated background################## */
+@media (max-width:1200) {
+    main {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
 
+    .grid img {
+        width: 100%;
+        filter: brightness(1);
+    }
+
+    /* ########################## About me section ##########################*/
+    #aboutMe p {
+        width: 80%;
+    }
+
+}
+
+/* ################## Animated background ################## */
+/*  
 .stars {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    height: 150vh;
     transform: rotate(-45deg);
-    z-index: -5;
+    z-index: 1;
+    width: 100%;
 }
 
 .star {
