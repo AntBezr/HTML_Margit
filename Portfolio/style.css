@@ -139,8 +139,8 @@ h2 {
     color: var(--greyText);
     padding: 0;
     vertical-align: center;
-    width: 100%;
-    margin: 0.5rem;
+    width: 90vw;
+    margin: 1rem;
 }
 
 /* ################### Projects ################### */
@@ -161,6 +161,7 @@ h2 {
 
 .projectBGBox:hover {
     box-shadow: 8px 8px 8px #c5c5c547;
+
 }
 
 #projectId {
@@ -171,7 +172,7 @@ h2 {
 
 .projectImg {
     width: 200px;
-    margin: 1rem;
+    padding: 1rem;
 }
 
 .projectBGBox h3 {
@@ -286,11 +287,14 @@ button {
     padding: 0.5rem;
     height: 5rem;
     max-width: 100%;
+    z-index: 100;
 }
 
 .bg h1 {
     display: none;
 }
+
+
 
 /* ################### Gallery css ######################## */
 
@@ -354,8 +358,7 @@ button {
     grid-area: i;
 }
 
-/* ################################################ */
-/* Mobile setings */
+/* ####################### Mobile setings ######################### */
 
 @media (max-width:576px) {
     header div {
@@ -367,6 +370,10 @@ button {
         align-items: center;
         text-align: center;
         margin: 0;
+    }
+
+    header a {
+        color: var(--blackText);
     }
 
     input {
@@ -388,6 +395,25 @@ button {
         border-radius: 2rem;
         display: none;
     }
+
+    section {
+        padding: 2vh 0vw;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem;
+        margin-top: 5rem;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid img {
+        filter: none;
+    }
+
 }
 
 
@@ -399,10 +425,11 @@ button {
 
     h1 {
         color: var(--darckGrey);
+        font-size: 2rem;
     }
 
     section {
-        padding: 2vh 5vw;
+        padding: 2vh 0vw;
     }
 
     section p {
@@ -422,6 +449,10 @@ button {
 
     label {
         font-size: 1rem;
+    }
+
+    .stars {
+        animation: initial;
     }
 
     /* Menu button */
@@ -454,6 +485,12 @@ button {
         width: 80%;
     }
 
+    /* ########################## gallery ##########################*/
+    .grid {
+        margin: 0.5rem;
+        margin-top: 5rem;
+    }
+
 }
 
 @media (max-width:1200) {
@@ -473,133 +510,148 @@ button {
         width: 80%;
     }
 
+    .stars {
+        animation: initial;
+    }
 }
 
 /* ################## Animated background ################## */
-/*  
+
 .stars {
     position: absolute;
     top: 0;
     left: 0;
-    height: 150vh;
-    transform: rotate(-45deg);
-    z-index: 1;
-    width: 100%;
+    padding: 100px;
+    width: 80%;
+    height: 100vh;
+    background-position-x: center;
+    background-size: cover;
+    animation: animateBg 50s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes animateBg {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 .star {
-    --star-color: var(--primary-color);
-    --star-tail-length: 6em;
-    --star-tail-height: 2px;
-    --star-width: calc(var(--star-tail-length) / 6);
-    --fall-duration: 9s;
-    --tail-fade-duration: var(--fall-duration);
     position: absolute;
-    top: var(--top-offset);
-    left: 0;
-    width: var(--star-tail-length);
-    height: var(--star-tail-height);
-    color: var(--star-color);
-    background: linear-gradient(45deg, currentColor, transparent);
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
     border-radius: 50%;
-    filter: drop-shadow(0 0 6px currentColor);
-    transform: translate3d(104em, 0, 0);
-    animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-    z-index: -5;
-}
-
-@media screen and (max-width: 750px) {
-    .star {
-        animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
-    }
-}
-
-
-.star:nth-child(1) {
-    --star-tail-length: 5.87em;
-    --top-offset: 17.72vh;
-    --fall-duration: 7.498s;
-    --fall-delay: 0.121s;
-}
-
-
-.star:nth-child(2) {
-    --star-tail-length: 7.12em;
-    --top-offset: 67.44vh;
-    --fall-duration: 11.391s;
-    --fall-delay: 5.18s;
-}
-
-.star:nth-child(3) {
-    --star-tail-length: 6.73em;
-    --top-offset: 36.81vh;
-    --fall-duration: 11.355s;
-    --fall-delay: 7.164s;
-}
-
-.star:nth-child(4) {
-    --star-tail-length: 6.03em;
-    --top-offset: 24.75vh;
-    --fall-duration: 11.424s;
-    --fall-delay: 5.948s;
-}
-
-.star:nth-child(5) {
-    --star-tail-length: 6.49em;
-    --top-offset: 66.73vh;
-    --fall-duration: 7.127s;
-    --fall-delay: 1.468s;
-}
-
-.star::before,
-.star::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: calc(var(--star-width) / -2);
-    width: var(--star-width);
-    height: 100%;
-    background: linear-gradient(45deg, transparent, currentColor, transparent);
-    border-radius: inherit;
-    animation: blink 2s linear infinite;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+    animation: animate 3s linear infinite;
 }
 
 .star::before {
-    transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
 }
 
-.star::after {
-    transform: rotate(-45deg);
-}
-
-@keyframes fall {
-    to {
-        transform: translate3d(-30em, 0, 0);
-    }
-}
-
-@keyframes tail-fade {
-
-    0%,
-    50% {
-        width: var(--star-tail-length);
+@keyframes animate {
+    0% {
+        transform: rotate(295deg) translateX(0);
         opacity: 1;
     }
 
-    70%,
-    80% {
-        width: 0;
-        opacity: 0.4;
+    70% {
+        opacity: 0.5;
+
     }
 
     100% {
-        width: 0;
+        transform: rotate(295deg) translateX(-1000px);
         opacity: 0;
+
     }
+
 }
 
-@keyframes blink {
-    50% {
-        opacity: 0.6;
-    }
+.star:nth-child(1) {
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+.star:nth-child(2) {
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+}
+
+.star:nth-child(3) {
+    top: 0px;
+    right: 0px;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+
+.star:nth-child(4) {
+    top: 0;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+
+.star:nth-child(5) {
+    top: 0;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+
+.star:nth-child(6) {
+    top: 0;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 2s;
+}
+
+.star:nth-child(7) {
+    top: 0;
+    right: 0px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 1.75s;
+}
+
+.star:nth-child(8) {
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+
+
+.star:nth-child(10) {
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.25s;
 }
