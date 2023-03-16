@@ -21,48 +21,54 @@ body {
     font-family: monospace;
 }
 
-/* ################### Header ################### */
+/* ################### General ################### */
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--greyText);
+}
+
+h2 {
+    font-size: 20pt;
+    color: var(--greyText);
+    padding: 0;
+    vertical-align: center;
+    width: 90vw;
+    margin: 1rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 14pt;
+    width: 75%;
+    text-align: justify;
+    vertical-align: top;
+    color: var(--greyText);
+    line-height: 1.5;
+}
+
+a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+/* ################### Header ################### */
 
 header {
     height: 5rem;
     color: var(--darckGrey);
     position: fixed;
     top: 0;
-}
-
-header.gallery {
-    height: 5rem;
-    color: var(--blackText);
-    background-color: rgb(250, 235, 215);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-}
-
-header.gallery a {
-    color: var(--blackText);
-}
-
-.heroBanner {
-    background: url(image/bgheader.jpg) no-repeat fixed center center/cover;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    height: 95vh;
-    z-index: -100;
-}
-
-h1 {
-    text-align: center;
-    font-size: 3rem;
-    color: var(--greyText);
 }
 
 .menu {
@@ -76,31 +82,23 @@ h1 {
     color: var(--primary-color);
 }
 
-.menuGallery {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    justify-self: center;
-    height: 5rem;
-    width: 100vw;
-    padding: 10px;
-    color: var(--blackText);
-}
 
-h5 {
-    font-size: 1.5rem;
+
+/* ################### Main ################### */
+
+.heroBanner {
+    background: url(image/bgheader.jpg) no-repeat fixed center center/cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 95vh;
+    z-index: -100;
 }
 
 nav ul li {
     font-size: x-large;
     display: inline-block;
     margin: 8px;
-}
-
-a {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    padding: 5px;
 }
 
 .mobile {
@@ -112,7 +110,6 @@ a {
 main {
     display: flex;
     flex-direction: column;
-
 }
 
 section {
@@ -125,49 +122,23 @@ section {
     min-height: 40vh;
 }
 
-p {
-    font-size: 14pt;
-    width: 75%;
-    text-align: justify;
-    vertical-align: top;
-    color: var(--greyText);
-    line-height: 1.5;
-}
-
-h2 {
-    font-size: 20pt;
-    color: var(--greyText);
-    padding: 0;
-    vertical-align: center;
-    width: 90vw;
-    margin: 1rem;
-}
 
 /* ################### Projects ################### */
 
-.projectBGBox {
 
+.projectBGBox {
     width: 300px;
     height: 400px;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     background-color: var(--lightGrey);
     justify-content: space-around;
     border-radius: 10px;
-
 }
 
 .projectBGBox:hover {
     box-shadow: 8px 8px 8px #c5c5c547;
-
-}
-
-#projectId {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .projectImg {
@@ -199,13 +170,13 @@ section img {
     align-items: center;
     justify-content: space-around;
     background-color: var(--lightGrey);
-    margin-top: 20px;
+    padding: 25px;
     color: hsl(15, 69%, 73%);
 }
 
 .skillsBox label {
     color: var(--primary-color);
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .skillsBox:nth-child(2n+1) {
@@ -247,7 +218,6 @@ label {
     font-size: 8pt;
     text-align: center;
     align-self: center;
-
 }
 
 input,
@@ -278,7 +248,7 @@ button {
 
 #backToTop:hover {
     text-shadow: 5px 5px 5px;
-    cursor: default;
+    cursor: pointer;
 }
 
 /*  ################### menu on scroll ################### */
@@ -294,9 +264,34 @@ button {
     display: none;
 }
 
-
-
 /* ################### Gallery css ######################## */
+
+header.gallery {
+    height: 5rem;
+    color: var(--blackText);
+    background-color: rgb(250, 235, 215);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header.gallery a {
+    color: var(--blackText);
+}
+
+.menuGallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: center;
+    height: 5rem;
+    width: 100vw;
+    padding: 10px;
+    color: var(--blackText);
+}
 
 .grid {
     display: grid;
@@ -457,8 +452,6 @@ button {
         animation: initial;
     }
 
-    /* Menu button */
-
     nav ul {
         display: none;
     }
@@ -482,12 +475,10 @@ button {
         margin: 1rem;
     }
 
-    /* ########################## About me section ##########################*/
     #aboutMe p {
         width: 80%;
     }
 
-    /* ########################## gallery ##########################*/
     .grid {
         margin: 0.5rem;
         margin-top: 5rem;
@@ -507,7 +498,6 @@ button {
         filter: brightness(1);
     }
 
-    /* ########################## About me section ##########################*/
     #aboutMe p {
         width: 80%;
     }
