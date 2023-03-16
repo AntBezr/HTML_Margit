@@ -87,7 +87,7 @@ header {
 /* ################### Main ################### */
 
 .heroBanner {
-    background: url(image/bgheader.jpg) no-repeat fixed center center/cover;
+    background: url(images/bgheader.jpg) no-repeat fixed center center/cover;
     display: flex;
     justify-content: center;
     position: relative;
