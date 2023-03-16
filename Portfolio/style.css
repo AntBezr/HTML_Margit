@@ -321,6 +321,7 @@ button {
 
 .a {
     grid-area: a;
+    align-self: stretch;
 }
 
 .b {
@@ -352,6 +353,7 @@ button {
 
 .h {
     grid-area: h;
+    align-self: stretch;
 }
 
 .i {

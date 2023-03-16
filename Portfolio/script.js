@@ -4,26 +4,34 @@ const menu = document.querySelector('.menu')
 const mobButton = document.querySelector('.mobile')
 const nav = document.querySelector('nav ul')
 const menuItems = document.querySelectorAll('ul li a')
+const path = window.location.pathname;
+const page = path.substring(path.lastIndexOf('/') + 1);
+
+
+const scrollFunction = () => {
+  if (page == "index.html") {
+    if (
+      document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backButton.style.display = 'block';
+      menu.style.background = '#faebd7e6';
+      menuItems.forEach(item => {
+        item.style.color = "black"
+      });
+    } else {
+      backButton.style.display = 'none';
+      menu.style.background = 'transparent';
+      menuItems.forEach(item => {
+        item.style.color = "var(--primary-color)"
+      });
+    }
+  }
+}
+
+
+
 
 
 window.onscroll = function () { scrollFunction() };
-
-const scrollFunction = () => {
-  if (
-    document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    backButton.style.display = 'block';
-    menu.style.background = '#faebd7e6';
-    menuItems.forEach(item => {
-      item.style.color = "black"
-    });
-  } else {
-    backButton.style.display = 'none';
-    menu.style.background = 'transparent';
-    menuItems.forEach(item => {
-      item.style.color = "var(--primary-color)"
-    });
-  }
-}
 
 const getToTop = () => {
   document.body.scrollTop = 0
