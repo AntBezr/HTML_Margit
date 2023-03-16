@@ -369,8 +369,12 @@ header.gallery a {
         margin: 0;
     }
 
-    header a {
+    .menu a {
         color: var(--blackText);
+    }
+
+    .skillsBox {
+        margin: 1rem 0;
     }
 
     input {
@@ -448,10 +452,6 @@ header.gallery a {
         font-size: 1rem;
     }
 
-    .stars {
-        animation: initial;
-    }
-
     nav ul {
         display: none;
     }
@@ -500,10 +500,6 @@ header.gallery a {
 
     #aboutMe p {
         width: 80%;
-    }
-
-    .stars {
-        animation: initial;
     }
 }
 
@@ -564,13 +560,11 @@ header.gallery a {
 
     70% {
         opacity: 0.5;
-
     }
 
     100% {
         transform: rotate(295deg) translateX(-1000px);
         opacity: 0;
-
     }
 
 }

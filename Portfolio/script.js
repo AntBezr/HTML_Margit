@@ -9,7 +9,6 @@ const menuItems = document.querySelectorAll('ul li a')
 const path = window.location.pathname;
 const page = path.substring(path.lastIndexOf('/') + 1);
 
-console.log(page);
 const scrollFunction = () => {
   if (page !== "gallery.html") {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
