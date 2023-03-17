@@ -247,7 +247,7 @@ button {
 }
 
 #backToTop:hover {
-    text-shadow: 5px 5px 5px;
+    color: var(--lightGrey);
     cursor: pointer;
 }
 

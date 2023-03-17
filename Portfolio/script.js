@@ -10,7 +10,7 @@ const path = window.location.pathname;
 const page = path.substring(path.lastIndexOf('/') + 1);
 
 const scrollFunction = () => {
-  if (page !== "gallery.html") {
+  if (page == "index.html" || '') {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
       backButton.style.display = 'block';
       mobButton.style.color = "var(--blackText)"
