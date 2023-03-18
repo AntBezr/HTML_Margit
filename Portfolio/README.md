@@ -5,7 +5,9 @@ The portfolio was completed in several steps by adding new features.
 The point of the task is to complete all studying steps and finish with working page
 
 Known issues to be solved:
-- On the mobile version at main page at the top 200px if you open the menu links inside the menu will be white with a beige background, but links should be black
+- On the mobile version at main page on the top if you open the menu links inside the menu will be white with a beige background, but links should be black
+- all versions. When you open page with direct link, js doesn't work. But if u come to main page from Gallery page, everything is fine 
+
 ## Technologies used
 
 Built with: 
