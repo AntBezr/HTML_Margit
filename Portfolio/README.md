@@ -4,8 +4,6 @@ This is portfolio project is a part of studying.
 The portfolio was completed in several steps by adding new features.
 The point of the task is to complete all studying steps and finish with working page
 
-Known issues to be solved:
-- On the mobile version at main page on the top if you open the menu links inside the menu will be white with a beige background, but links should be black
 
 ## Technologies used
 
