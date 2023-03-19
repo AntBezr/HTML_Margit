@@ -370,7 +370,7 @@ header.gallery a {
     }
 
     .menu a {
-        color: var(--blackText);
+        color: var(--blackText) !important;
     }
 
     .skillsBox {
@@ -631,13 +631,4 @@ header.gallery a {
     left: initial;
     animation-delay: 1.4s;
     animation-duration: 1.25s;
-}
-
-
-.star:nth-child(10) {
-    top: 0px;
-    right: 700px;
-    left: initial;
-    animation-delay: 2.75s;
-    animation-duration: 2.25s;
 }
